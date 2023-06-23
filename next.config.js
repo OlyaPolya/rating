@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/semi */
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
