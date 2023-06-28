@@ -1,9 +1,13 @@
-import { Htag, Button, Ptag, Tag } from '../../components';
+'use client';
+import { Htag, Button, Ptag, Tag, Rating } from '../../components';
+import { useState } from 'react';
 
 export default function Home(): JSX.Element {
+  const [rating, setRating] = useState<number>(2);
+
   return (
     <>
-      <Htag tag='h1'>Some text</Htag>
+      <Htag tag='h1'>Pfuj</Htag>
       <Button appearance='primary' arrow='right'>
         Кнопка
       </Button>
@@ -14,6 +18,7 @@ export default function Home(): JSX.Element {
       <Ptag>Rfrjq ntrcn</Ptag>
       <Ptag size='S'>Rfrjq ntrcn</Ptag>
       <Tag size='S'>Rfrjq ntrcn</Tag>
+      <Rating rating={rating} isEditable={true} setRating={setRating} />
     </>
   );
 }
