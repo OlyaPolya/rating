@@ -1,8 +1,9 @@
 'use client';
 import { Htag, Button, Ptag, Tag, Rating } from '../../components';
 import { useState } from 'react';
+import { withLayout } from '../../layout/Layout';
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(2);
 
   return (
@@ -22,3 +23,5 @@ export default function Home(): JSX.Element {
     </>
   );
 }
+
+export default withLayout(Home);
